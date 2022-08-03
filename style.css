@@ -55,7 +55,6 @@ main {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-column-gap: 52px;
-  margin-top: 95px;
 }
 
 .content__wrapper {
