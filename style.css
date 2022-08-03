@@ -15,19 +15,11 @@ body {
   background-color: #674baf;
   background-size: cover;
   position: relative;
-  /*   &::before {
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(./design/desktop-design.jpg);
-    position: absolute;
-    opacity: 0.3;
-    pointer-events: none;
-    background-position: top;
-    background-repeat: no-repeat;
-  } */
+}
+
+header {
+  width: 100%;
+  position: absolute;
 }
 
 .container {
@@ -48,7 +40,13 @@ body {
 }
 
 main {
-  margin-top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 .main__content {
@@ -89,7 +87,6 @@ main {
   font-size: 1.1em;
   width: 200px;
   height: 55px;
-  display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,5 +166,95 @@ footer {
 
 .attribution a {
   color: #e882e8;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+  .logo {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    padding: 20px 0;
+  }
+  .main__content {
+    -ms-grid-columns: 50% 1fr;
+        grid-template-columns: 50% 1fr;
+  }
+  .left__side img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    height: auto;
+  }
+  .main__content {
+    padding: 100px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .footer__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(./images/bg-mobile.svg);
+  }
+  .container {
+    padding: 0 15px;
+  }
+  header,
+  footer {
+    position: initial;
+    -webkit-transform: initial;
+            transform: initial;
+    left: initial;
+  }
+  .logo svg {
+    -webkit-transform: scale(0.56);
+            transform: scale(0.56);
+    left: -55px;
+  }
+  .content__wrapper {
+    padding: 65px 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content__title {
+    font-size: 1.65em;
+    text-align: center;
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+  }
+  .content__txt {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 29px;
+  }
+  .content__btn {
+    width: 228px;
+    height: 45px;
+  }
+  .socials__item {
+    padding: 6px 7px;
+    margin: 0 2px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
