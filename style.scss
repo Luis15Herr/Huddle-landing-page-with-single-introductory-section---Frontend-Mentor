@@ -17,6 +17,20 @@ body {
   background-color: $Violet;
   background-size: cover;
   position: relative;
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./design/desktop-design.jpg);
+    position: absolute;
+    opacity: 0.3;
+    pointer-events: none;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 header {
@@ -45,6 +59,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 52px;
+  margin-top: 95px;
 }
 .content__wrapper {
   padding: 42px 0;
@@ -99,7 +114,7 @@ footer {
   justify-content: end;
 }
 .socials {
-  height: 41px;
+  height: 33px;
 }
 .socials__item {
   border: 1px solid white;
